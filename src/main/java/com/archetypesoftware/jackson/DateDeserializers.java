@@ -38,17 +38,25 @@ public class DateDeserializers {
     public static class Millis2LocalDateTimeDeserializer extends Millis2DateDeserializer<LocalDateTime> {
 
         public Millis2LocalDateTimeDeserializer() {
-            super(LocalDateTime.class, (millis) -> Instant.ofEpochMilli(millis)
-                            .atZone(ZoneId.systemDefault())
-                            .toLocalDateTime());
+            super(LocalDateTime.class, DateDeserializers::dateTimeOf);
         }
     }
 
     public static class Millis2LocalDateDeserializer extends Millis2DateDeserializer<LocalDate> {
         public Millis2LocalDateDeserializer() {
-            super(LocalDate.class, (millis) -> Instant.ofEpochMilli(millis)
-                    .atZone(ZoneId.systemDefault())
-                    .toLocalDate());
+            super(LocalDate.class, DateDeserializers::dateOf);
         }
+    }
+
+    public static LocalDateTime dateTimeOf(long millis) {
+        return Instant.ofEpochMilli(millis)
+                .atZone(ZoneId.systemDefault())
+                .toLocalDateTime();
+    }
+
+    public static LocalDate dateOf(long millis) {
+        return Instant.ofEpochMilli(millis)
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
     }
 }

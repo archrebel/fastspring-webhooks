@@ -14,8 +14,11 @@ import com.fasterxml.jackson.annotation.*;
 
 
 // ----------- << imports@AAAAAAFp+P/bVJP2oWU= >>
+import com.archetypesoftware.jackson.DateDeserializers;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 // ----------- >>
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 // ----------- << class.annotations@AAAAAAFp+P/bVJP2oWU= >>
 // ----------- >>
 public class Subscription {
@@ -33,6 +36,7 @@ public class Subscription {
 
     @JsonProperty("changed")
     // ----------- << attribute.annotations@AAAAAAFp+P/bVJP6U9I= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime dateOfLastUpdate;
 
@@ -110,6 +114,7 @@ public class Subscription {
 
     @JsonProperty("next")
     // ----------- << attribute.annotations@AAAAAAFp+P/bVZQOJB4= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime dateOfNextCharge;
 
@@ -119,10 +124,12 @@ public class Subscription {
     private String dateOfNextChargeDisplay;
 
     // ----------- << attribute.annotations@AAAAAAFp+P/bVZQSJQU= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime canceledDate;
 
     // ----------- << attribute.annotations@AAAAAAFp+P/bVZQT2/k= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime deactivationDate;
 
@@ -132,6 +139,7 @@ public class Subscription {
 
     @JsonProperty("begin")
     // ----------- << attribute.annotations@AAAAAAFp+P/bVZQVSEM= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime validFrom;
 
@@ -148,6 +156,7 @@ public class Subscription {
     private String nextChargeCurrency;
 
     // ----------- << attribute.annotations@AAAAAAFp+P/bVZQaqDg= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime nextChargeDate;
 
@@ -172,6 +181,7 @@ public class Subscription {
     private String nextNotificationType;
 
     // ----------- << attribute.annotations@AAAAAAFp+P/bVZQgtcM= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime nextNotificationDate;
 

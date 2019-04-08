@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.*;
 // ----------- << imports@AAAAAAFp+P/bU5PqVK8= >>
 // ----------- >>
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 // ----------- << class.annotations@AAAAAAFp+P/bU5PqVK8= >>
 // ----------- >>
 public class Item {

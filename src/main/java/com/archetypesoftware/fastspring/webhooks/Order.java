@@ -14,8 +14,11 @@ import com.fasterxml.jackson.annotation.*;
 
 
 // ----------- << imports@AAAAAAFp+P/bS5KXaFw= >>
+import com.archetypesoftware.jackson.DateDeserializers;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 // ----------- >>
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 // ----------- << class.annotations@AAAAAAFp+P/bS5KXaFw= >>
 // ----------- >>
 public class Order {
@@ -49,6 +52,7 @@ public class Order {
 
     @JsonProperty("changed")
     // ----------- << attribute.annotations@AAAAAAFp+P/bS5KnKHE= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime dateOfUpdate;
 

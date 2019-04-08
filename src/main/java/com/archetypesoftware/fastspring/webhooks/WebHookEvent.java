@@ -26,7 +26,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 )
 
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = SubscriptionActivatedEvent.class, name = "subscription.activated")
+        @JsonSubTypes.Type(value = SubscriptionActivatedEvent.class, name = "subscription.activated"),
+        @JsonSubTypes.Type(value = SubscriptionChargeCompletedEvent.class, name = "subscription.charge.completed")
 })
 // ----------- >>
 public class WebHookEvent<T extends EventPayload> {

@@ -9,12 +9,13 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 
+import static com.archetypesoftware.jackson.DateDeserializers.dateTimeOf;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
 
-public class DeserializationTests {
+public class SubscriptionActivatedDeserializationTests {
     private ObjectMapper mapper = new ObjectMapper();
 
     @Test
@@ -86,11 +87,5 @@ public class DeserializationTests {
         // next notification
         assertThat(payload.getNextNotificationDate(), is(dateTimeOf(1556064000000L)));
         assertThat(payload.getNextNotificationType(), is("PAYMENT_REMINDER"));
-    }
-
-    private static LocalDateTime dateTimeOf(long millis) {
-        return Instant.ofEpochMilli(millis)
-                .atZone(ZoneId.systemDefault())
-                .toLocalDateTime();
     }
 }

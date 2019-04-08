@@ -13,6 +13,8 @@ import java.time.*;
 
 
 // ----------- << imports@AAAAAAFp+P/bS5KHX50= >>
+import com.archetypesoftware.jackson.DateDeserializers;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 // ----------- >>
 
 /**
@@ -35,6 +37,7 @@ public class SubscriptionChargeCompletedPayload extends EventPayload {
     private String status;
 
     // ----------- << attribute.annotations@AAAAAAFp+P/bS5KVIp4= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime timestamp;
 

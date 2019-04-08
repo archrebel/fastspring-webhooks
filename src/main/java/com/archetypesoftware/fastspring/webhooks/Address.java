@@ -10,11 +10,13 @@ package com.archetypesoftware.fastspring.webhooks;
 import java.util.*;
 import java.time.*;
 
+import com.fasterxml.jackson.annotation.*;
 
 
 // ----------- << imports@AAAAAAFp+P/bU5PiTxE= >>
 // ----------- >>
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 // ----------- << class.annotations@AAAAAAFp+P/bU5PiTxE= >>
 // ----------- >>
 public class Address {
