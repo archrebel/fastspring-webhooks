@@ -18,17 +18,18 @@ import com.archetypesoftware.jackson.DateDeserializers;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 // ----------- >>
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-// ----------- << class.annotations@AAAAAAFp+P/bQJFPjoU= >>
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         property = "type"
 )
-
 @JsonSubTypes({
         @JsonSubTypes.Type(value = SubscriptionActivatedEvent.class, name = "subscription.activated"),
-        @JsonSubTypes.Type(value = SubscriptionChargeCompletedEvent.class, name = "subscription.charge.completed")
+        @JsonSubTypes.Type(value = SubscriptionChargeCompletedEvent.class, name = "subscription.charge.completed"),
+        @JsonSubTypes.Type(value = SubscriptionDeactivatedEvent.class, name = "subscription.deactivated"),
+        @JsonSubTypes.Type(value = SubscriptionCanceledEvent.class, name = "subscriptionCanceledEvent")
 })
+@JsonIgnoreProperties(ignoreUnknown = true)
+// ----------- << class.annotations@AAAAAAFp+P/bQJFPjoU= >>
 // ----------- >>
 public class WebHookEvent<T extends EventPayload> {
     /**
