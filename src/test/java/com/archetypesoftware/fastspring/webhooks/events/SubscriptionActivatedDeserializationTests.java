@@ -1,13 +1,11 @@
-package com.archetypesoftware.fastspring.webhooks;
+package com.archetypesoftware.fastspring.webhooks.events;
 
+import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 
 import static com.archetypesoftware.jackson.DateDeserializers.dateTimeOf;
 import static org.hamcrest.MatcherAssert.assertThat;

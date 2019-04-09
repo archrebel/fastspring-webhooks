@@ -1,5 +1,6 @@
-package com.archetypesoftware.fastspring.webhooks;
+package com.archetypesoftware.fastspring.webhooks.events;
 
+import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 
@@ -11,18 +12,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 
-public class SubscriptionCanceledDeserializationTests {
+public class SubscriptionDeactivatedDeserializationTests {
     private ObjectMapper mapper = new ObjectMapper();
     @Test
-    public void GIVEN_subscriptionCanceledMessage_WHEN_deserializing_THEN_expectPredefinedValues() throws IOException {
+    public void GIVEN_deactivatedMessage_WHEN_deserialized_THEN_findExpectedValues() throws IOException {
         URL resource = getClass()
                 .getClassLoader()
-                .getResource("subscriptionCanceled.json");
+                .getResource("subscriptionDeactivated.json");
 
-        SubscriptionCanceledEvent event = (SubscriptionCanceledEvent)
+        SubscriptionDeactivatedEvent event = (SubscriptionDeactivatedEvent)
                 mapper.readValue(resource, WebHookEvent.class);
 
-        SubscriptionCanceledPayload payload = event.getData();
+        SubscriptionDeactivatedPayload payload = event.getData();
         CustomerAccount account = payload.getAccount();
 
         // event
@@ -35,14 +36,14 @@ public class SubscriptionCanceledDeserializationTests {
         assertThat(account.getFirst(), is("Marcellus"));
         assertThat(account.getLast(), is("Walrus"));
         assertThat(account.getEmail(), is("ne1@all.com"));
-        assertThat(account.getCompany(), is("Walrus Promotions Inc."));
+        assertThat(account.getCompany(), is("IndoChina Exports, Inc."));
         assertThat(account.getPhone(), is(nullValue()));
 
         // payload
-        assertThat(payload.getSubscriptionId(), is("dpr5V3IBQvKwqsGGwQlizw"));
-        assertThat(payload.getState(), is("canceled"));
+        assertThat(payload.getSubscriptionId(), is("Du0BMOFlR3W8spSdUh8QrQ"));
+        assertThat(payload.getState(), is("deactivated"));
         assertThat(payload.isLive(), is(false));
-        assertThat(payload.getDateOfLastUpdate(), is(dateTimeOf(1507764858198L)));
+        assertThat(payload.getDateOfLastUpdate(), is(dateTimeOf(1508177103541L)));
         assertThat(payload.getProductId(), is("falcon-monthly-variation"));
         assertThat(payload.getProductDisplay(), is("Falcon Monthly Subscription"));
         assertThat(payload.getSku(), is("furious10"));
@@ -66,14 +67,14 @@ public class SubscriptionCanceledDeserializationTests {
         assertThat(payload.getDateOfNextCharge(), is(dateTimeOf(1515628800000L)));
         assertThat(payload.getDateOfNextChargeDisplay(), is("1/11/18"));
 
-        assertThat(payload.getEndDate(), is(nullValue()));
-        assertThat(payload.getEndDateDisplay(), is(nullValue()));
+        assertThat(payload.getEndDate(), is(dateTimeOf(1508112000000L)));
+        assertThat(payload.getEndDateDisplay(), is("10/16/17"));
 
-        assertThat(payload.getDateOfCancelation(), is(dateTimeOf(1507852800000L)));
-        assertThat(payload.getDateOfCancelationDisplay(), is("10/13/17"));
+        assertThat(payload.getDateOfCancelation(), is(dateTimeOf(1508112000000L)));
+        assertThat(payload.getDateOfCancelationDisplay(), is("10/16/17"));
 
-        assertThat(payload.getDateOfDeactivation(), is(dateTimeOf(1515542400000L)));
-        assertThat(payload.getDateOfDeactivationDisplay(), is("1/10/18"));
+        assertThat(payload.getDateOfDeactivation(), is(nullValue()));
+        assertThat(payload.getDateOfDeactivationDisplay(), is(nullValue()));
 
         assertThat(payload.getSequence(), is(1));
         assertThat(payload.getPeriods(), is(0));

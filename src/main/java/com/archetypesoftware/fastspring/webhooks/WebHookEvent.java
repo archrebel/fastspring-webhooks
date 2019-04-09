@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.*;
 
 
 // ----------- << imports@AAAAAAFp+P/bQJFPjoU= >>
+import com.archetypesoftware.fastspring.webhooks.events.*;
 import com.archetypesoftware.jackson.DateDeserializers;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 // ----------- >>

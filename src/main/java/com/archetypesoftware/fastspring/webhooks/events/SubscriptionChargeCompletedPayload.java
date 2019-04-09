@@ -5,14 +5,15 @@
 *
 * Drop us a line or two at feedback@archetypesoftware.com. We would love to hear from you.
 */
-package com.archetypesoftware.fastspring.webhooks;
+package com.archetypesoftware.fastspring.webhooks.events;
 
 import java.util.*;
 import java.time.*;
 
 
-
+import com.archetypesoftware.fastspring.webhooks.EventPayload;
 // ----------- << imports@AAAAAAFp+P/bS5KHX50= >>
+import com.archetypesoftware.fastspring.webhooks.EventPayload;
 import com.archetypesoftware.jackson.DateDeserializers;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 // ----------- >>
