@@ -35,6 +35,7 @@ public class SubscriptionChargeCompletedEvent extends WebHookEvent<SubscriptionC
     // ----------- >>
     public void accept(EventVisitor visitor) {
     // ----------- << method.body@AAAAAAFqAbH7GPfUB10= >>
+        visitor.visit(this);
     // ----------- >>
     }
 // ----------- << class.extras@AAAAAAFp+P/bQJFbN28= >>

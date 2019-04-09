@@ -27,7 +27,7 @@ import com.archetypesoftware.fastspring.webhooks.events.SubscriptionDeactivatedE
 // ----------- >>
 public interface EventVisitor {
     /**
-    * @param event
+    * @param event SubscriptionActivatedEvent
     */
 
     // ----------- << method.annotations@AAAAAAFqAa/y2vePxXc= >>

@@ -37,6 +37,7 @@ public class SubscriptionDeactivatedEvent extends WebHookEvent<SubscriptionDeact
     // ----------- >>
     public void accept(EventVisitor visitor) {
     // ----------- << method.body@AAAAAAFqAbICmPfer7Q= >>
+        visitor.visit(this);
     // ----------- >>
     }
 // ----------- << class.extras@AAAAAAFp+P/bQJFfKH8= >>

@@ -55,6 +55,7 @@ public class Notification {
     // ----------- >>
     public void process(EventVisitor visitor) {
     // ----------- << method.body@AAAAAAFqAbrMCfh3ZdQ= >>
+        events.forEach(event -> event.accept(visitor));
     // ----------- >>
     }
 // ----------- << class.extras@AAAAAAFqAbm1y/fsvU8= >>

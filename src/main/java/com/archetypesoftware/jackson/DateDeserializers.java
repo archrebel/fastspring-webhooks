@@ -23,7 +23,7 @@ class Millis2DateDeserializer<T> extends StdDeserializer<T> {
     }
 
     @Override
-    public T deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
+    public T deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
         String timestamp = jsonParser.getText();
 
         if (StringUtils.isBlank(timestamp)) {

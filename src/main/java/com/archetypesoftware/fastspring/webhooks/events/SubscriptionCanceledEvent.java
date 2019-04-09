@@ -20,13 +20,14 @@ import com.archetypesoftware.fastspring.webhooks.EventVisitor;
 // ----------- >>
 public class SubscriptionCanceledEvent extends WebHookEvent<SubscriptionCanceledPayload> {
     /**
-    * @param visitor
+    * @param visitor Visitor
     */
 
     // ----------- << method.annotations@AAAAAAFqAbHzb/fK3SY= >>
     // ----------- >>
     public void accept(EventVisitor visitor) {
     // ----------- << method.body@AAAAAAFqAbHzb/fK3SY= >>
+        visitor.visit(this);
     // ----------- >>
     }
 // ----------- << class.extras@AAAAAAFp+P/bQZFhPM0= >>

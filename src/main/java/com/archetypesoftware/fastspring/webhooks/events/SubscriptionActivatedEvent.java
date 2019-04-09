@@ -27,6 +27,7 @@ public class SubscriptionActivatedEvent extends WebHookEvent<SubscriptionActivat
     // ----------- >>
     public void accept(EventVisitor visitor) {
     // ----------- << method.body@AAAAAAFqAbG6Dfe/nkw= >>
+        visitor.visit(this);
     // ----------- >>
     }
 // ----------- << class.extras@AAAAAAFp+P/bQJFXvsg= >>
