@@ -15,9 +15,19 @@ import java.time.*;
 // ----------- << imports@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
 
+/**
+* The subscription.deactivated server webhook event is fired upon deactivation of a subscription, 
+* including deactivation at the end of the billing period following a prior cancellation, or immediately upon 
+* cancellation when a subscription is canceled with the Deactivate Now option selected (via Dashboard) or the 
+* billingPeriod=0 parameter is included (canceling via the /subscriptions endpoint of the FastSpring API). 
+* 
+* For more information, see:
+* http://docs.fastspring.com/integrating-with-fastspring/webhooks/subscription-deactivated
+*/
+
 // ----------- << class.annotations@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
-public class SubscriptionDeactivatedEvent extends WebHookEvent {
+public class SubscriptionDeactivatedEvent extends WebHookEvent<SubscriptionDeactivatedPayload> {
 // ----------- << class.extras@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
 }
