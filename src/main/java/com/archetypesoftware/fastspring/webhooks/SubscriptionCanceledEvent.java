@@ -17,7 +17,7 @@ import java.time.*;
 
 // ----------- << class.annotations@AAAAAAFp+P/bQZFhPM0= >>
 // ----------- >>
-public class SubscriptionCanceledEvent extends WebHookEvent {
+public class SubscriptionCanceledEvent extends WebHookEvent<SubscriptionCanceledPayload> {
 // ----------- << class.extras@AAAAAAFp+P/bQZFhPM0= >>
 // ----------- >>
 }

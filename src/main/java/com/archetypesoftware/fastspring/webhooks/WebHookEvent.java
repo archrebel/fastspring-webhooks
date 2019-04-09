@@ -26,7 +26,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
         @JsonSubTypes.Type(value = SubscriptionActivatedEvent.class, name = "subscription.activated"),
         @JsonSubTypes.Type(value = SubscriptionChargeCompletedEvent.class, name = "subscription.charge.completed"),
         @JsonSubTypes.Type(value = SubscriptionDeactivatedEvent.class, name = "subscription.deactivated"),
-        @JsonSubTypes.Type(value = SubscriptionCanceledEvent.class, name = "subscriptionCanceledEvent")
+        @JsonSubTypes.Type(value = SubscriptionCanceledEvent.class, name = "subscription.canceled")
 })
 @JsonIgnoreProperties(ignoreUnknown = true)
 // ----------- << class.annotations@AAAAAAFp+P/bQJFPjoU= >>
