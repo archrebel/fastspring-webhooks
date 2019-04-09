@@ -12,7 +12,7 @@ import java.time.*;
 
 import com.fasterxml.jackson.annotation.*;
 
-
+import com.archetypesoftware.fastspring.webhooks.EventVisitor;
 // ----------- << imports@AAAAAAFp+P/bQJFPjoU= >>
 import com.archetypesoftware.fastspring.webhooks.events.*;
 import com.archetypesoftware.jackson.DateDeserializers;
@@ -32,7 +32,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 @JsonIgnoreProperties(ignoreUnknown = true)
 // ----------- << class.annotations@AAAAAAFp+P/bQJFPjoU= >>
 // ----------- >>
-public class WebHookEvent<T extends EventPayload> {
+public abstract class WebHookEvent<T extends EventPayload> {
     /**
     * Unique ID of the event.
     */
@@ -111,6 +111,13 @@ public class WebHookEvent<T extends EventPayload> {
         this.data = data;
     }
 
+    /**
+    * @param visitor
+    */
+
+    // ----------- << method.annotations@AAAAAAFqAbFPmve1n8E= >>
+    // ----------- >>
+    public abstract void accept(EventVisitor visitor);
 // ----------- << class.extras@AAAAAAFp+P/bQJFPjoU= >>
 // ----------- >>
 }

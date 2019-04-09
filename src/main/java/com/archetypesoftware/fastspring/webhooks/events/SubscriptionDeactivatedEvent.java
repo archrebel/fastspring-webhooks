@@ -12,6 +12,7 @@ import java.time.*;
 
 
 import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
+import com.archetypesoftware.fastspring.webhooks.EventVisitor;
 // ----------- << imports@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
 
@@ -28,6 +29,16 @@ import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
 // ----------- << class.annotations@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
 public class SubscriptionDeactivatedEvent extends WebHookEvent<SubscriptionDeactivatedPayload> {
+    /**
+    * @param visitor
+    */
+
+    // ----------- << method.annotations@AAAAAAFqAbICmPfer7Q= >>
+    // ----------- >>
+    public void accept(EventVisitor visitor) {
+    // ----------- << method.body@AAAAAAFqAbICmPfer7Q= >>
+    // ----------- >>
+    }
 // ----------- << class.extras@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
 }
