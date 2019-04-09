@@ -1,5 +1,6 @@
-package com.archetypesoftware.fastspring.webhooks;
+package com.archetypesoftware.fastspring.webhooks.events;
 
+import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 

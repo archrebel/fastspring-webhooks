@@ -5,13 +5,14 @@
 *
 * Drop us a line or two at feedback@archetypesoftware.com. We would love to hear from you.
 */
-package com.archetypesoftware.fastspring.webhooks;
+package com.archetypesoftware.fastspring.webhooks.events;
 
 import java.util.*;
 import java.time.*;
 
 
-
+import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
+import com.archetypesoftware.fastspring.webhooks.EventVisitor;
 // ----------- << imports@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
 
@@ -28,6 +29,17 @@ import java.time.*;
 // ----------- << class.annotations@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
 public class SubscriptionDeactivatedEvent extends WebHookEvent<SubscriptionDeactivatedPayload> {
+    /**
+    * @param visitor
+    */
+
+    // ----------- << method.annotations@AAAAAAFqAbICmPfer7Q= >>
+    // ----------- >>
+    public void accept(EventVisitor visitor) {
+    // ----------- << method.body@AAAAAAFqAbICmPfer7Q= >>
+        visitor.visit(this);
+    // ----------- >>
+    }
 // ----------- << class.extras@AAAAAAFp+P/bQJFfKH8= >>
 // ----------- >>
 }

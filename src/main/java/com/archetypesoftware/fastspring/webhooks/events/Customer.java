@@ -5,7 +5,7 @@
 *
 * Drop us a line or two at feedback@archetypesoftware.com. We would love to hear from you.
 */
-package com.archetypesoftware.fastspring.webhooks;
+package com.archetypesoftware.fastspring.webhooks.events;
 
 import java.util.*;
 import java.time.*;
