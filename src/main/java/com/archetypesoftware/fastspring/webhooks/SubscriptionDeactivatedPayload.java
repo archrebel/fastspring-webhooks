@@ -14,6 +14,8 @@ import com.fasterxml.jackson.annotation.*;
 
 
 // ----------- << imports@AAAAAAFqAPUF7uNpms8= >>
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.archetypesoftware.jackson.DateDeserializers;
 // ----------- >>
 
 // ----------- << class.annotations@AAAAAAFqAPUF7uNpms8= >>
@@ -28,8 +30,13 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
     // ----------- >>
     private String subscriptionId;
 
+    // ----------- << attribute.annotations@AAAAAAFqAS+TnOydT1I= >>
+    // ----------- >>
+    private String state;
+
     @JsonProperty("changed")
     // ----------- << attribute.annotations@AAAAAAFqAPqhNePNOMc= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime dateOfLastUpdate;
 
@@ -124,6 +131,7 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
 
     @JsonProperty("next")
     // ----------- << attribute.annotations@AAAAAAFqAQeJv+dsTac= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime dateOfNextCharge;
 
@@ -143,6 +151,7 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
 
     @JsonProperty("end")
     // ----------- << attribute.annotations@AAAAAAFqAQlVXufdkUM= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime endDate;
 
@@ -162,6 +171,7 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
 
     @JsonProperty("canceledDate")
     // ----------- << attribute.annotations@AAAAAAFqAQxu4OhgW10= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime dateOfCancelation;
 
@@ -182,6 +192,7 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
 
     @JsonProperty("deactivationDate")
     // ----------- << attribute.annotations@AAAAAAFqAQ3fyOjRBYY= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime dateOfDeactivation;
 
@@ -213,6 +224,7 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
 
     @JsonProperty("begin")
     // ----------- << attribute.annotations@AAAAAAFqARGFiepFBHY= >>
+    @JsonDeserialize(using = DateDeserializers.Millis2LocalDateTimeDeserializer.class)
     // ----------- >>
     private LocalDateTime validFrom;
 
@@ -222,7 +234,7 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
 
     // ----------- << attribute.annotations@AAAAAAFqARHsIuqPa6g= >>
     // ----------- >>
-    private String intervalLength;
+    private int intervalLength;
 
     // ----------- << attribute.annotations@AAAAAAFqAPvJyuQh2wk= >>
     // ----------- >>
@@ -230,6 +242,10 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
 
     public String getSubscriptionId() {
         return subscriptionId;
+    }
+
+    public String getState() {
+        return state;
     }
 
     public LocalDateTime getDateOfLastUpdate() {
@@ -356,7 +372,7 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
         return intervalUnit;
     }
 
-    public String getIntervalLength() {
+    public int getIntervalLength() {
         return intervalLength;
     }
 
@@ -366,6 +382,10 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
 
     public void setSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public void setDateOfLastUpdate(LocalDateTime dateOfLastUpdate) {
@@ -492,7 +512,7 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
         this.intervalUnit = intervalUnit;
     }
 
-    public void setIntervalLength(String intervalLength) {
+    public void setIntervalLength(int intervalLength) {
         this.intervalLength = intervalLength;
     }
 
@@ -509,5 +529,10 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
     }
 
 // ----------- << class.extras@AAAAAAFqAPUF7uNpms8= >>
+    @SuppressWarnings("unused")
+    @JsonProperty("product")
+    private void flatMapProduct(Map<String, Object> product) {
+        this.productId = (String) product.get("product");
+    }
 // ----------- >>
 }
