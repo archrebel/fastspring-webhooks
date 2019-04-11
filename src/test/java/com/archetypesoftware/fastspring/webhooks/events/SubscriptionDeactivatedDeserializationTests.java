@@ -1,19 +1,30 @@
 package com.archetypesoftware.fastspring.webhooks.events;
 
+import com.archetypesoftware.fastspring.webhooks.EventVisitor;
+import com.archetypesoftware.fastspring.webhooks.Notification;
 import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.io.IOException;
 import java.net.URL;
 
 import static com.archetypesoftware.jackson.DateDeserializers.dateTimeOf;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 
+@RunWith(MockitoJUnitRunner.class)
 public class SubscriptionDeactivatedDeserializationTests {
     private ObjectMapper mapper = new ObjectMapper();
+
+    @Mock
+    private EventVisitor eventVisitor;
+
     @Test
     public void GIVEN_deactivatedMessage_WHEN_deserialized_THEN_findExpectedValues() throws IOException {
         URL resource = getClass()
@@ -84,5 +95,49 @@ public class SubscriptionDeactivatedDeserializationTests {
 
         assertThat(payload.getIntervalUnit(), is("month"));
         assertThat(payload.getIntervalLength(), is(3));
+    }
+
+    @Test
+    public void GIVEN_deactivatedWebhook_WHEN_deserialized_THEN_assertPredefinedValues() throws IOException {
+        URL resource = getClass()
+                .getClassLoader()
+                .getResource("event-yearly-subscription-deactivate.json");
+
+        Notification notification = mapper.readValue(resource, Notification.class);
+
+        doAnswer(invocationOnMock -> {
+            SubscriptionDeactivatedEvent event = invocationOnMock.getArgument(0);
+            SubscriptionDeactivatedPayload payload = event.getData();
+
+            // subscription data
+            assertThat(payload.getProductId(), is("falcon-plus-annual-subscription-individual-license"));
+            assertThat(payload.getDateOfLastUpdate(), is(dateTimeOf(1554730518066L)));
+            assertThat(payload.getSubscriptionId(), is("AFAkVOi0SSix63cXJAbIfg"));
+            assertThat(payload.isLive(), is(false));
+            assertThat(payload.getState(), is("deactivated"));
+            assertThat(payload.getQuantity(), is(1));
+
+            assertThat(payload.getValidFrom(), is(dateTimeOf(1554681600000L)));
+            assertThat(payload.getIntervalUnit(), is("year"));
+            assertThat(payload.getIntervalLength(), is(1));
+
+            CustomerAccount account = payload.getAccount();
+            assertThat(account.getId(), is("Th6JqSnZTdCSqqBxibhB7Q"));
+            assertThat(account.getFirst(), is("john"));
+            assertThat(account.getLast(), is("doe"));
+            assertThat(account.getEmail(), is("abc@xyz.com"));
+            assertThat(account.getCompany(), is(nullValue()));
+            assertThat(account.getPhone(), is("123456"));
+
+            return null;
+        }).when(eventVisitor).visit((SubscriptionDeactivatedEvent) any());
+
+        assertThat(notification.getEvents(), hasSize(1));
+
+        // assert values
+        notification.process(eventVisitor);
+
+        // verify invocation
+        verify(eventVisitor, only()).visit((SubscriptionDeactivatedEvent) notification.getEvents().get(0));
     }
 }

@@ -1,18 +1,29 @@
 package com.archetypesoftware.fastspring.webhooks.events;
 
+import com.archetypesoftware.fastspring.webhooks.EventVisitor;
+import com.archetypesoftware.fastspring.webhooks.Notification;
 import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.io.IOException;
 import java.net.URL;
 
 import static com.archetypesoftware.jackson.DateDeserializers.dateTimeOf;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 
+@RunWith(MockitoJUnitRunner.class)
 public class SubscriptionCanceledDeserializationTests {
+
+    @Mock
+    private EventVisitor eventVisitor;
+
     private ObjectMapper mapper = new ObjectMapper();
     @Test
     public void GIVEN_subscriptionCanceledMessage_WHEN_deserializing_THEN_expectPredefinedValues() throws IOException {
@@ -84,5 +95,93 @@ public class SubscriptionCanceledDeserializationTests {
 
         assertThat(payload.getIntervalUnit(), is("month"));
         assertThat(payload.getIntervalLength(), is(3));
+    }
+
+    @Test
+    public void GIVEN_canceledMonthlyWebhook_WHEN_deserialized_THEN_assertPredefinedValues() throws IOException {
+        URL resource = getClass()
+                .getClassLoader()
+                .getResource("event-monthly-subscription-cancel.json");
+
+        Notification notification = mapper.readValue(resource, Notification.class);
+
+        doAnswer(invocationOnMock -> {
+            SubscriptionCanceledEvent event = invocationOnMock.getArgument(0);
+            SubscriptionCanceledPayload payload = event.getData();
+
+            // subscription data
+            assertThat(payload.getProductId(), is("falcon-plus-monthly-subscription-individual"));
+            assertThat(payload.getDateOfLastUpdate(), is(dateTimeOf(1554091889618L)));
+            assertThat(payload.getSubscriptionId(), is("c5XWkUQiQSyqrDTHM8J5Kw"));
+            assertThat(payload.isLive(), is(false));
+            assertThat(payload.getState(), is("canceled"));
+            assertThat(payload.getQuantity(), is(1));
+
+            assertThat(payload.getValidFrom(), is(dateTimeOf(1554076800000L)));
+            assertThat(payload.getIntervalUnit(), is("month"));
+            assertThat(payload.getIntervalLength(), is(1));
+
+            CustomerAccount account = payload.getAccount();
+            assertThat(account.getId(), is("MpQe-PVBQnOguo9A_Pz8Dg"));
+            assertThat(account.getFirst(), is("John"));
+            assertThat(account.getLast(), is("Doe"));
+            assertThat(account.getEmail(), is("john.doe@gmail.com"));
+            assertThat(account.getCompany(), is(nullValue()));
+            assertThat(account.getPhone(), is("064444333"));
+
+            return null;
+        }).when(eventVisitor).visit((SubscriptionCanceledEvent) any());
+
+        assertThat(notification.getEvents(), hasSize(1));
+
+        // assert values
+        notification.process(eventVisitor);
+
+        // verify invocation
+        verify(eventVisitor, only()).visit((SubscriptionCanceledEvent) notification.getEvents().get(0));
+    }
+
+    @Test
+    public void GIVEN_canceledYearlyWebhook_WHEN_deserialized_THEN_assertPredefinedValues() throws IOException {
+        URL resource = getClass()
+                .getClassLoader()
+                .getResource("event-yearly-subscription-cancel.json");
+
+        Notification notification = mapper.readValue(resource, Notification.class);
+
+        doAnswer(invocationOnMock -> {
+            SubscriptionCanceledEvent event = invocationOnMock.getArgument(0);
+            SubscriptionCanceledPayload payload = event.getData();
+
+            // subscription data
+            assertThat(payload.getProductId(), is("falcon-plus-annual-subscription-individual-license"));
+            assertThat(payload.getDateOfLastUpdate(), is(dateTimeOf(1554090861640L)));
+            assertThat(payload.getSubscriptionId(), is("r1LtQnrIS5KpDIoGQaeuHg"));
+            assertThat(payload.isLive(), is(false));
+            assertThat(payload.getState(), is("canceled"));
+            assertThat(payload.getQuantity(), is(1));
+
+            assertThat(payload.getValidFrom(), is(dateTimeOf(1554076800000L)));
+            assertThat(payload.getIntervalUnit(), is("year"));
+            assertThat(payload.getIntervalLength(), is(1));
+
+            CustomerAccount account = payload.getAccount();
+            assertThat(account.getId(), is("MpQe-PVBQnOguo9A_Pz8Dg"));
+            assertThat(account.getFirst(), is("John"));
+            assertThat(account.getLast(), is("Doe"));
+            assertThat(account.getEmail(), is("john.doe@gmail.com"));
+            assertThat(account.getCompany(), is(nullValue()));
+            assertThat(account.getPhone(), is("064444333"));
+
+            return null;
+        }).when(eventVisitor).visit((SubscriptionCanceledEvent) any());
+
+        assertThat(notification.getEvents(), hasSize(1));
+
+        // assert values
+        notification.process(eventVisitor);
+
+        // verify invocation
+        verify(eventVisitor, only()).visit((SubscriptionCanceledEvent) notification.getEvents().get(0));
     }
 }
