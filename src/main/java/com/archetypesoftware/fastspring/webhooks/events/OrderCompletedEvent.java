@@ -13,23 +13,30 @@ import java.time.*;
 
 import com.archetypesoftware.fastspring.webhooks.WebHookEvent;
 import com.archetypesoftware.fastspring.webhooks.EventVisitor;
-// ----------- << imports@AAAAAAFp+P/bQZFhPM0= >>
+// ----------- << imports@AAAAAAFqFYFmhfvIQpw= >>
 // ----------- >>
 
-// ----------- << class.annotations@AAAAAAFp+P/bQZFhPM0= >>
+/**
+* OrderCompletedEvent encapsulates information contained within 'order.completed' FastSpring webhook. 
+* 
+* For more information see:
+* http://docs.fastspring.com/integrating-with-fastspring/webhooks/order-completed
+*/
+
+// ----------- << class.annotations@AAAAAAFqFYFmhfvIQpw= >>
 // ----------- >>
-public class SubscriptionCanceledEvent extends WebHookEvent<SubscriptionCanceledPayload> {
+public class OrderCompletedEvent extends WebHookEvent<OrderCompletedPayload> {
     /**
     * @param visitor
     */
 
-    // ----------- << method.annotations@AAAAAAFqAbHzb/fK3SY= >>
+    // ----------- << method.annotations@AAAAAAFqFYJl//xW+58= >>
     // ----------- >>
     public void accept(EventVisitor visitor) {
-    // ----------- << method.body@AAAAAAFqAbHzb/fK3SY= >>
+    // ----------- << method.body@AAAAAAFqFYJl//xW+58= >>
         visitor.visit(this);
     // ----------- >>
     }
-// ----------- << class.extras@AAAAAAFp+P/bQZFhPM0= >>
+// ----------- << class.extras@AAAAAAFqFYFmhfvIQpw= >>
 // ----------- >>
 }

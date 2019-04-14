@@ -13,10 +13,7 @@ import java.time.*;
 
 
 // ----------- << imports@AAAAAAFqAa+rM/dk+Pw= >>
-import com.archetypesoftware.fastspring.webhooks.events.SubscriptionActivatedEvent;
-import com.archetypesoftware.fastspring.webhooks.events.SubscriptionCanceledEvent;
-import com.archetypesoftware.fastspring.webhooks.events.SubscriptionChargeCompletedEvent;
-import com.archetypesoftware.fastspring.webhooks.events.SubscriptionDeactivatedEvent;
+import com.archetypesoftware.fastspring.webhooks.events.*;
 // ----------- >>
 
 /**
@@ -27,7 +24,7 @@ import com.archetypesoftware.fastspring.webhooks.events.SubscriptionDeactivatedE
 // ----------- >>
 public interface EventVisitor {
     /**
-    * @param event SubscriptionActivatedEvent
+    * @param event
     */
 
     // ----------- << method.annotations@AAAAAAFqAa/y2vePxXc= >>
@@ -54,6 +51,13 @@ public interface EventVisitor {
     // ----------- << method.annotations@AAAAAAFqAbDT9verBno= >>
     // ----------- >>
     void visit(SubscriptionDeactivatedEvent event);
+    /**
+    * @param event
+    */
+
+    // ----------- << method.annotations@AAAAAAFqF2zxa5qcWPU= >>
+    // ----------- >>
+    void visit(OrderCompletedEvent event);
 // ----------- << interface.extras@AAAAAAFqAa+rM/dk+Pw= >>
 // ----------- >>
 }
