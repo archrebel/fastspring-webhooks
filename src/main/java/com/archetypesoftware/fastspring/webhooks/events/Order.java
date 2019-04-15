@@ -122,6 +122,10 @@ public class Order {
     // ----------- >>
     private float totalInPayoutCurrency;
 
+    // ----------- << attribute.annotations@AAAAAAFqIIsHhm3yTMI= >>
+    // ----------- >>
+    private String totalInPayoutCurrencyDisplay;
+
     /**
     * amount of tax
     */
@@ -153,6 +157,10 @@ public class Order {
     // ----------- << attribute.annotations@AAAAAAFp+P/bTJK3RNE= >>
     // ----------- >>
     private float subtotalInPayoutCurrency;
+
+    // ----------- << attribute.annotations@AAAAAAFqIIqKF2utIFA= >>
+    // ----------- >>
+    private String subtotalInPayoutCurrencyDisplay;
 
     // ----------- << attribute.annotations@AAAAAAFp+P/bTJK4Dbo= >>
     // ----------- >>
@@ -246,6 +254,10 @@ public class Order {
         return totalInPayoutCurrency;
     }
 
+    public String getTotalInPayoutCurrencyDisplay() {
+        return totalInPayoutCurrencyDisplay;
+    }
+
     public float getTax() {
         return tax;
     }
@@ -268,6 +280,10 @@ public class Order {
 
     public float getSubtotalInPayoutCurrency() {
         return subtotalInPayoutCurrency;
+    }
+
+    public String getSubtotalInPayoutCurrencyDisplay() {
+        return subtotalInPayoutCurrencyDisplay;
     }
 
     public float getDiscount() {
@@ -362,6 +378,10 @@ public class Order {
         this.totalInPayoutCurrency = totalInPayoutCurrency;
     }
 
+    public void setTotalInPayoutCurrencyDisplay(String totalInPayoutCurrencyDisplay) {
+        this.totalInPayoutCurrencyDisplay = totalInPayoutCurrencyDisplay;
+    }
+
     public void setTax(float tax) {
         this.tax = tax;
     }
@@ -384,6 +404,10 @@ public class Order {
 
     public void setSubtotalInPayoutCurrency(float subtotalInPayoutCurrency) {
         this.subtotalInPayoutCurrency = subtotalInPayoutCurrency;
+    }
+
+    public void setSubtotalInPayoutCurrencyDisplay(String subtotalInPayoutCurrencyDisplay) {
+        this.subtotalInPayoutCurrencyDisplay = subtotalInPayoutCurrencyDisplay;
     }
 
     public void setDiscount(float discount) {

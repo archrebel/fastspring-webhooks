@@ -42,12 +42,14 @@ public class SubscriptionChargeCompletedDeserializationTests {
         assertThat(order.getTotal(), is(14.95F));
         assertThat(order.getTotalDisplay(), is("$14.95"));
         assertThat(order.getTotalInPayoutCurrency(), is(14.95F));
+        assertThat(order.getTotalInPayoutCurrencyDisplay(), is("$14.95"));
         assertThat(order.getTax(), is(0F));
         assertThat(order.getTaxDisplay(), is("$0.00"));
         assertThat(order.getTaxInPayoutCurrency(), is(0F));
         assertThat(order.getSubtotal(), is(14.95F));
         assertThat(order.getSubtotalDisplay(), is("$14.95"));
         assertThat(order.getSubtotalInPayoutCurrency(), is(14.95F));
+        assertThat(order.getSubtotalInPayoutCurrencyDisplay(), is("$14.95"));
         assertThat(order.getDiscount(), is(0F));
         assertThat(order.getDiscountDisplay(), is("$0.00"));
         assertThat(order.getDiscountInPayoutCurrency(), is(0F));

@@ -5,14 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.archetypesoftware</groupId>
     <artifactId>fastspring-webhooks</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>FastSpring Webhooks</name>
-    <description>The purpose of this project is to provide data structures needed to process FastSpring webhooks in Java applications.</description>
+    <description>The purpose of this project is to provide data structures needed to process FastSpring webhooks in Java
+        applications.
+    </description>
     <url>https://github.com/archrebel/fastspring-webhooks</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <build>
         <plugins>
             <plugin>
