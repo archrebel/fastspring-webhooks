@@ -142,5 +142,23 @@ public class Item {
     }
 
 // ----------- << class.extras@AAAAAAFp+P/bU5PqVK8= >>
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "product='" + product + '\'' +
+                ", quantity=" + quantity +
+                ", display='" + display + '\'' +
+                ", subtotal=" + subtotal +
+                ", subtotalDisplay='" + subtotalDisplay + '\'' +
+                ", subtotalInPayoutCurrency=" + subtotalInPayoutCurrency +
+                ", discount=" + discount +
+                ", discountDisplay='" + discountDisplay + '\'' +
+                ", discountInPayoutCurrency=" + discountInPayoutCurrency +
+                ", subscriptionId='" + subscriptionId + '\'' +
+                '}';
+    }
+
+
 // ----------- >>
 }

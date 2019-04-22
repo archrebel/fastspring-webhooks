@@ -106,5 +106,18 @@ public class CustomerAccount {
         company = (String) contact.get("company");
         phone = (String) contact.get("phone");
     }
-// ----------- >>
+
+    @Override
+    public String toString() {
+        return "CustomerAccount{" +
+                "id='" + id + '\'' +
+                ", first='" + first + '\'' +
+                ", last='" + last + '\'' +
+                ", email='" + email + '\'' +
+                ", company='" + company + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
+
+    // ----------- >>
 }

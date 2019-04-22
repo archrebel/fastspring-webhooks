@@ -555,5 +555,44 @@ public class SubscriptionActivatedPayload extends EventPayload {
     private void flatMapProduct(Map<String, Object> product) {
         this.productId = (String) product.get("product");
     }
-// ----------- >>
+
+    @Override
+    public String toString() {
+        return "SubscriptionActivatedPayload{" +
+                "subscriptionId='" + subscriptionId + '\'' +
+                ", dateOfLastUpdate=" + dateOfLastUpdate +
+                ", state='" + state + '\'' +
+                ", live=" + live +
+                ", currency='" + currency + '\'' +
+                ", productId='" + productId + '\'' +
+                ", productDisplay='" + productDisplay + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                ", priceDisplay='" + priceDisplay + '\'' +
+                ", discount=" + discount +
+                ", discountDisplay='" + discountDisplay + '\'' +
+                ", subtotal=" + subtotal +
+                ", subtotalDisplay='" + subtotalDisplay + '\'' +
+                ", priceInPayoutCurrency=" + priceInPayoutCurrency +
+                ", discountInPayoutCurrency=" + discountInPayoutCurrency +
+                ", subtotalInPayoutCurrency=" + subtotalInPayoutCurrency +
+                ", dateOfNextCharge=" + dateOfNextCharge +
+                ", dateOfNextChargeDisplay='" + dateOfNextChargeDisplay + '\'' +
+                ", billingSequence=" + billingSequence +
+                ", validFrom=" + validFrom +
+                ", validFromDisplay='" + validFromDisplay + '\'' +
+                ", intervalUnit='" + intervalUnit + '\'' +
+                ", intervalLength=" + intervalLength +
+                ", nextChargeDateDisplay='" + nextChargeDateDisplay + '\'' +
+                ", nextChargeCurrency='" + nextChargeCurrency + '\'' +
+                ", nextChargeTotal=" + nextChargeTotal +
+                ", nextChargeTotalDisplay='" + nextChargeTotalDisplay + '\'' +
+                ", nextChargeTotalInPayoutCurrency=" + nextChargeTotalInPayoutCurrency +
+                ", nextNotificationDate=" + nextNotificationDate +
+                ", nextNotificationType='" + nextNotificationType + '\'' +
+                ", account=" + account +
+                '}';
+    }
+
+    // ----------- >>
 }

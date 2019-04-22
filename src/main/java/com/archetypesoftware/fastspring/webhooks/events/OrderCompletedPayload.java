@@ -469,5 +469,45 @@ public class OrderCompletedPayload extends EventPayload {
     }
 
 // ----------- << class.extras@AAAAAAFqFYFscvvxewM= >>
+
+    @Override
+    public String toString() {
+        return "OrderCompletedPayload{" +
+                "orderId='" + orderId + '\'' +
+                ", reference='" + reference + '\'' +
+                ", buyerReference='" + buyerReference + '\'' +
+                ", dateOfUpdate=" + dateOfUpdate +
+                ", live=" + live +
+                ", currency='" + currency + '\'' +
+                ", payoutCurrency='" + payoutCurrency + '\'' +
+                ", total=" + total +
+                ", totalDisplay='" + totalDisplay + '\'' +
+                ", totalInPayoutCurrency=" + totalInPayoutCurrency +
+                ", totalInPayoutCurrencyDisplay='" + totalInPayoutCurrencyDisplay + '\'' +
+                ", tax=" + tax +
+                ", taxDisplay='" + taxDisplay + '\'' +
+                ", taxInPayoutCurrency=" + taxInPayoutCurrency +
+                ", taxInPayoutCurrencyDisplay='" + taxInPayoutCurrencyDisplay + '\'' +
+                ", subtotal=" + subtotal +
+                ", subtotalDisplay='" + subtotalDisplay + '\'' +
+                ", subtotalInPayoutCurrency=" + subtotalInPayoutCurrency +
+                ", subtotalInPayoutCurrencyDisplay='" + subtotalInPayoutCurrencyDisplay + '\'' +
+                ", discount=" + discount +
+                ", discountDisplay='" + discountDisplay + '\'' +
+                ", discountInPayoutCurrency=" + discountInPayoutCurrency +
+                ", discountInPayoutCurrencyDisplay='" + discountInPayoutCurrencyDisplay + '\'' +
+                ", discountWithTax=" + discountWithTax +
+                ", discountWithTaxDisplay='" + discountWithTaxDisplay + '\'' +
+                ", discountWithTaxInPayoutCurrency=" + discountWithTaxInPayoutCurrency +
+                ", discountWithTaxInPayoutCurrencyDisplay='" + discountWithTaxInPayoutCurrencyDisplay + '\'' +
+                ", billDescriptor='" + billDescriptor + '\'' +
+                ", account=" + account +
+                ", payment=" + payment +
+                ", customer=" + customer +
+                ", items=" + items +
+                '}';
+    }
+
+
 // ----------- >>
 }

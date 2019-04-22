@@ -79,5 +79,18 @@ public class Customer {
     }
 
 // ----------- << class.extras@AAAAAAFp+P/bU5PcEds= >>
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "first='" + first + '\'' +
+                ", last='" + last + '\'' +
+                ", email='" + email + '\'' +
+                ", company='" + company + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
+
+
 // ----------- >>
 }

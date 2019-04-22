@@ -491,5 +491,43 @@ public class Order {
     }
 
 // ----------- << class.extras@AAAAAAFp+P/bS5KXaFw= >>
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id='" + id + '\'' +
+                ", reference='" + reference + '\'' +
+                ", buyerReference='" + buyerReference + '\'' +
+                ", dateOfUpdate=" + dateOfUpdate +
+                ", language='" + language + '\'' +
+                ", currency='" + currency + '\'' +
+                ", payoutCurrency='" + payoutCurrency + '\'' +
+                ", invoiceUrl='" + invoiceUrl + '\'' +
+                ", accountId='" + accountId + '\'' +
+                ", total=" + total +
+                ", totalDisplay='" + totalDisplay + '\'' +
+                ", totalInPayoutCurrency=" + totalInPayoutCurrency +
+                ", totalInPayoutCurrencyDisplay='" + totalInPayoutCurrencyDisplay + '\'' +
+                ", tax=" + tax +
+                ", taxDisplay='" + taxDisplay + '\'' +
+                ", taxInPayoutCurrency=" + taxInPayoutCurrency +
+                ", subtotal=" + subtotal +
+                ", subtotalDisplay='" + subtotalDisplay + '\'' +
+                ", subtotalInPayoutCurrency=" + subtotalInPayoutCurrency +
+                ", subtotalInPayoutCurrencyDisplay='" + subtotalInPayoutCurrencyDisplay + '\'' +
+                ", discount=" + discount +
+                ", discountDisplay='" + discountDisplay + '\'' +
+                ", discountInPayoutCurrency=" + discountInPayoutCurrency +
+                ", discountWithTax=" + discountWithTax +
+                ", discountWithTaxDisplay='" + discountWithTaxDisplay + '\'' +
+                ", dixcountWithTaxInPayoutCurrency=" + dixcountWithTaxInPayoutCurrency +
+                ", billDescriptor='" + billDescriptor + '\'' +
+                ", payment=" + payment +
+                ", customer=" + customer +
+                ", address=" + address +
+                ", items=" + items +
+                '}';
+    }
+
 // ----------- >>
 }

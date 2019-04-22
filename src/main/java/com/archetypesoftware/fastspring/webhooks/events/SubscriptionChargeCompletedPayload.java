@@ -147,5 +147,20 @@ public class SubscriptionChargeCompletedPayload extends EventPayload {
     }
 
 // ----------- << class.extras@AAAAAAFp+P/bS5KHX50= >>
+
+    @Override
+    public String toString() {
+        return "SubscriptionChargeCompletedPayload{" +
+                "currency='" + currency + '\'' +
+                ", total=" + total +
+                ", status='" + status + '\'' +
+                ", timestamp=" + timestamp +
+                ", sequence=" + sequence +
+                ", order=" + order +
+                ", account=" + account +
+                ", subscription=" + subscription +
+                '}';
+    }
+
 // ----------- >>
 }

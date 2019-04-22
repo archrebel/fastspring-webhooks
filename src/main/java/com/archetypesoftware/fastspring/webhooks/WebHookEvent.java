@@ -120,5 +120,18 @@ public abstract class WebHookEvent<T extends EventPayload> {
     // ----------- >>
     public abstract void accept(EventVisitor visitor);
 // ----------- << class.extras@AAAAAAFp+P/bQJFPjoU= >>
+
+    @Override
+    public String toString() {
+        return "WebHookEvent{" +
+                "id='" + id + '\'' +
+                ", live=" + live +
+                ", processed=" + processed +
+                ", createdAt=" + createdAt +
+                ", data=" + data +
+                '}';
+    }
+
+
 // ----------- >>
 }

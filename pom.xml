@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.archetypesoftware</groupId>
     <artifactId>fastspring-webhooks</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3</version>
     <name>FastSpring Webhooks</name>
     <description>The purpose of this project is to provide data structures needed to process FastSpring webhooks in Java
         applications.

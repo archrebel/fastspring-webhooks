@@ -67,5 +67,16 @@ public class Payment {
     }
 
 // ----------- << class.extras@AAAAAAFp+P/bUpPXljw= >>
+
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "type='" + type + '\'' +
+                ", creditcard='" + creditcard + '\'' +
+                ", cardEnding='" + cardEnding + '\'' +
+                ", bank='" + bank + '\'' +
+                '}';
+    }
+
 // ----------- >>
 }

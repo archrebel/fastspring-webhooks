@@ -105,5 +105,20 @@ public class Address {
     }
 
 // ----------- << class.extras@AAAAAAFp+P/bU5PiTxE= >>
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", addressLine1='" + addressLine1 + '\'' +
+                ", addressLine2='" + addressLine2 + '\'' +
+                ", regionCode='" + regionCode + '\'' +
+                ", regionDisplay='" + regionDisplay + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", country='" + country + '\'' +
+                '}';
+    }
+
+
 // ----------- >>
 }

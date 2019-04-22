@@ -502,5 +502,52 @@ public class Subscription {
     }
 
 // ----------- << class.extras@AAAAAAFp+P/bVJP2oWU= >>
+
+    @Override
+    public String toString() {
+        return "Subscription{" +
+                "id='" + id + '\'' +
+                ", active=" + active +
+                ", state='" + state + '\'' +
+                ", dateOfLastUpdate=" + dateOfLastUpdate +
+                ", live=" + live +
+                ", currency='" + currency + '\'' +
+                ", account='" + account + '\'' +
+                ", product='" + product + '\'' +
+                ", sku='" + sku + '\'' +
+                ", display='" + display + '\'' +
+                ", quantity=" + quantity +
+                ", adhoc=" + adhoc +
+                ", autoRenew=" + autoRenew +
+                ", price=" + price +
+                ", priceDisplay='" + priceDisplay + '\'' +
+                ", priceInPayoutCurrency=" + priceInPayoutCurrency +
+                ", discount=" + discount +
+                ", discountDisplay='" + discountDisplay + '\'' +
+                ", discountInPayoutCurrency=" + discountInPayoutCurrency +
+                ", subtotal=" + subtotal +
+                ", subtotalDisplay='" + subtotalDisplay + '\'' +
+                ", subtotalInPayoutCurrency=" + subtotalInPayoutCurrency +
+                ", dateOfNextCharge=" + dateOfNextCharge +
+                ", dateOfNextChargeDisplay='" + dateOfNextChargeDisplay + '\'' +
+                ", canceledDate=" + canceledDate +
+                ", deactivationDate=" + deactivationDate +
+                ", sequence=" + sequence +
+                ", validFrom=" + validFrom +
+                ", intervalUnit='" + intervalUnit + '\'' +
+                ", intervalLength=" + intervalLength +
+                ", nextChargeCurrency='" + nextChargeCurrency + '\'' +
+                ", nextChargeDate=" + nextChargeDate +
+                ", nextChargeDateDisplay='" + nextChargeDateDisplay + '\'' +
+                ", nextChargeTotal=" + nextChargeTotal +
+                ", nextChargeTotalDisplay='" + nextChargeTotalDisplay + '\'' +
+                ", nextChargeTotalInPayoutCurrency=" + nextChargeTotalInPayoutCurrency +
+                ", nextNotificationType='" + nextNotificationType + '\'' +
+                ", nextNotificationDate=" + nextNotificationDate +
+                ", nextNotificationDateDisplay='" + nextNotificationDateDisplay + '\'' +
+                '}';
+    }
+
+
 // ----------- >>
 }

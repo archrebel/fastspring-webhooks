@@ -201,5 +201,26 @@ public class SubscriptionInfo {
     }
 
 // ----------- << class.extras@AAAAAAFqFaNF3w6vl2k= >>
+
+    @Override
+    public String toString() {
+        return "SubscriptionInfo{" +
+                "id='" + id + '\'' +
+                ", active=" + active +
+                ", state='" + state + '\'' +
+                ", dateOfLastUpdate=" + dateOfLastUpdate +
+                ", sequence=" + sequence +
+                ", validFrom=" + validFrom +
+                ", validUntil=" + validUntil +
+                ", dateOfNextCharge=" + dateOfNextCharge +
+                ", nextChargeTotal=" + nextChargeTotal +
+                ", nextChargeTotalInPayoutCurrency=" + nextChargeTotalInPayoutCurrency +
+                ", nextChargeTotalDisplay='" + nextChargeTotalDisplay + '\'' +
+                ", nextChargeTotalInPayoutCurrencyDisplay='" + nextChargeTotalInPayoutCurrencyDisplay + '\'' +
+                ", nextNotificationType='" + nextNotificationType + '\'' +
+                ", dateOfNextNotification=" + dateOfNextNotification +
+                '}';
+    }
+
 // ----------- >>
 }

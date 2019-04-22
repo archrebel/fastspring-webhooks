@@ -534,5 +534,47 @@ public class SubscriptionDeactivatedPayload extends EventPayload {
     private void flatMapProduct(Map<String, Object> product) {
         this.productId = (String) product.get("product");
     }
-// ----------- >>
+
+    @Override
+    public String toString() {
+        return "SubscriptionDeactivatedPayload{" +
+                "subscriptionId='" + subscriptionId + '\'' +
+                ", state='" + state + '\'' +
+                ", dateOfLastUpdate=" + dateOfLastUpdate +
+                ", live=" + live +
+                ", productId='" + productId + '\'' +
+                ", sku='" + sku + '\'' +
+                ", productDisplay='" + productDisplay + '\'' +
+                ", quantity=" + quantity +
+                ", adhoc=" + adhoc +
+                ", autorenew=" + autorenew +
+                ", currency='" + currency + '\'' +
+                ", price=" + price +
+                ", priceDisplay='" + priceDisplay + '\'' +
+                ", priceInPayoutCurrency=" + priceInPayoutCurrency +
+                ", discount=" + discount +
+                ", discountDisplay='" + discountDisplay + '\'' +
+                ", discountInPayoutCurrency=" + discountInPayoutCurrency +
+                ", subtotal=" + subtotal +
+                ", subtotalDisplay='" + subtotalDisplay + '\'' +
+                ", subtotalInPayoutCurrency=" + subtotalInPayoutCurrency +
+                ", dateOfNextCharge=" + dateOfNextCharge +
+                ", dateOfNextChargeDisplay='" + dateOfNextChargeDisplay + '\'' +
+                ", endDate=" + endDate +
+                ", endDateDisplay='" + endDateDisplay + '\'' +
+                ", dateOfCancelation=" + dateOfCancelation +
+                ", dateOfCancelationDisplay='" + dateOfCancelationDisplay + '\'' +
+                ", dateOfDeactivation=" + dateOfDeactivation +
+                ", dateOfDeactivationDisplay='" + dateOfDeactivationDisplay + '\'' +
+                ", sequence=" + sequence +
+                ", periods=" + periods +
+                ", remainingPeriods=" + remainingPeriods +
+                ", validFrom=" + validFrom +
+                ", intervalUnit='" + intervalUnit + '\'' +
+                ", intervalLength=" + intervalLength +
+                ", account=" + account +
+                '}';
+    }
+
+    // ----------- >>
 }
