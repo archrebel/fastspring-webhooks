@@ -576,5 +576,5 @@ public class SubscriptionCanceledPayload extends EventPayload {
                 '}';
     }
 
-    // ----------- >>
+// ----------- >>
 }

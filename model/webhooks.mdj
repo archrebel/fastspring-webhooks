@@ -4383,7 +4383,7 @@
 															"font": "Arial;11;1",
 															"left": 774,
 															"top": 106,
-															"width": 72.13916015625,
+															"width": 68,
 															"height": 11,
 															"text": "EventPayload"
 														},
@@ -4509,7 +4509,7 @@
 											"containerChangeable": true,
 											"left": 769,
 											"top": 99,
-											"width": 82.13916015625,
+											"width": 78,
 											"height": 23,
 											"autoResize": true,
 											"showProperty": false,
@@ -4574,7 +4574,7 @@
 															"font": "Arial;11;1",
 															"left": 693,
 															"top": 287,
-															"width": 204.14453125,
+															"width": 188,
 															"height": 11,
 															"text": "SubscriptionChargeCompletedPayload"
 														},
@@ -4652,7 +4652,7 @@
 															"font": "Arial;11;0",
 															"left": 693,
 															"top": 308,
-															"width": 204.14453125,
+															"width": 188,
 															"height": 11,
 															"text": "+currency: string",
 															"horizontalAlignment": 0
@@ -4670,7 +4670,7 @@
 															"font": "Arial;11;0",
 															"left": 693,
 															"top": 321,
-															"width": 204.14453125,
+															"width": 188,
 															"height": 11,
 															"text": "+total: float",
 															"horizontalAlignment": 0
@@ -4688,7 +4688,7 @@
 															"font": "Arial;11;0",
 															"left": 693,
 															"top": 334,
-															"width": 204.14453125,
+															"width": 188,
 															"height": 11,
 															"text": "+status: string",
 															"horizontalAlignment": 0
@@ -4706,7 +4706,7 @@
 															"font": "Arial;11;0",
 															"left": 693,
 															"top": 347,
-															"width": 204.14453125,
+															"width": 188,
 															"height": 11,
 															"text": "+timestamp: dateTime",
 															"horizontalAlignment": 0
@@ -4724,7 +4724,7 @@
 															"font": "Arial;11;0",
 															"left": 693,
 															"top": 360,
-															"width": 204.14453125,
+															"width": 188,
 															"height": 11,
 															"text": "+sequence: int",
 															"horizontalAlignment": 0
@@ -4734,7 +4734,7 @@
 													"font": "Arial;11;0",
 													"left": 688,
 													"top": 303,
-													"width": 214.14453125,
+													"width": 198,
 													"height": 73
 												},
 												{
@@ -4794,7 +4794,7 @@
 											"containerChangeable": true,
 											"left": 688,
 											"top": 280,
-											"width": 214.14453125,
+											"width": 198,
 											"height": 96,
 											"autoResize": true,
 											"showProperty": false,
@@ -4952,7 +4952,7 @@
 															"font": "Arial;11;3",
 															"left": 133,
 															"top": 95,
-															"width": 141.0751953125,
+															"width": 134.4521484375,
 															"height": 11,
 															"text": "WebHookEvent"
 														},
@@ -4992,7 +4992,7 @@
 													"font": "Arial;11;0",
 													"left": 128,
 													"top": 88,
-													"width": 151.0751953125,
+													"width": 144.4521484375,
 													"height": 23,
 													"stereotypeLabel": {
 														"$ref": "AAAAAAFp+P/bSpJnqQ8="
@@ -5195,7 +5195,7 @@
 															},
 															"fillColor": "#00bbff",
 															"font": "Arial;11;0",
-															"left": 162,
+															"left": 155.376953125,
 															"top": 77,
 															"width": 121.0751953125,
 															"height": 11,
@@ -5205,7 +5205,7 @@
 													],
 													"fillColor": "#00bbff",
 													"font": "Arial;11;0",
-													"left": 157,
+													"left": 150.376953125,
 													"top": 72,
 													"width": 131.0751953125,
 													"height": 21
@@ -5216,7 +5216,7 @@
 											"containerChangeable": true,
 											"left": 128,
 											"top": 72,
-											"width": 161.0751953125,
+											"width": 154.4521484375,
 											"height": 39,
 											"autoResize": true,
 											"showProperty": false,
@@ -5619,7 +5619,7 @@
 											"tail": {
 												"$ref": "AAAAAAFp+P/bSpJ1Q0s="
 											},
-											"points": "304:296;384:296;384:93;288:93",
+											"points": "304:296;384:296;384:93;281:93",
 											"showVisibility": true,
 											"showProperty": false,
 											"nameLabel": {
@@ -19532,7 +19532,7 @@
 															"font": "Arial;11;3",
 															"left": 206,
 															"top": 143,
-															"width": 159.4873046875,
+															"width": 155.18359375,
 															"height": 11,
 															"text": "WebHookEvent"
 														},
@@ -19546,7 +19546,7 @@
 															"font": "Arial;11;0",
 															"left": 206,
 															"top": 156,
-															"width": 159.4873046875,
+															"width": 155.18359375,
 															"height": 11,
 															"text": "(from webhooks)"
 														},
@@ -19571,7 +19571,7 @@
 													"font": "Arial;11;0",
 													"left": 201,
 													"top": 136,
-													"width": 169.4873046875,
+													"width": 165.18359375,
 													"height": 36,
 													"stereotypeLabel": {
 														"$ref": "AAAAAAFqFYBzs/tiBvg="
@@ -19723,7 +19723,7 @@
 															"font": "Arial;11;2",
 															"left": 206,
 															"top": 177,
-															"width": 159.4873046875,
+															"width": 155.18359375,
 															"height": 11,
 															"text": "+accept(visitor: EventVisitor)",
 															"horizontalAlignment": 0
@@ -19733,7 +19733,7 @@
 													"font": "Arial;11;0",
 													"left": 201,
 													"top": 172,
-													"width": 169.4873046875,
+													"width": 165.18359375,
 													"height": 21
 												},
 												{
@@ -19772,7 +19772,7 @@
 															},
 															"fillColor": "#38bcff",
 															"font": "Arial;11;0",
-															"left": 253.412109375,
+															"left": 249.1083984375,
 															"top": 125,
 															"width": 121.0751953125,
 															"height": 11,
@@ -19782,7 +19782,7 @@
 													],
 													"fillColor": "#38bcff",
 													"font": "Arial;11;0",
-													"left": 248.412109375,
+													"left": 244.1083984375,
 													"top": 120,
 													"width": 131.0751953125,
 													"height": 21
@@ -19793,7 +19793,7 @@
 											"containerChangeable": true,
 											"left": 201,
 											"top": 120,
-											"width": 179.4873046875,
+											"width": 175.18359375,
 											"height": 73,
 											"autoResize": true,
 											"showNamespace": true,
@@ -19858,7 +19858,7 @@
 															"font": "Arial;11;1",
 															"left": 768,
 															"top": 117,
-															"width": 81.91455078125,
+															"width": 81,
 															"height": 11,
 															"text": "EventPayload"
 														},
@@ -19872,7 +19872,7 @@
 															"font": "Arial;11;0",
 															"left": 768,
 															"top": 130,
-															"width": 81.91455078125,
+															"width": 81,
 															"height": 11,
 															"text": "(from webhooks)"
 														},
@@ -19986,7 +19986,7 @@
 											"containerChangeable": true,
 											"left": 763,
 											"top": 110,
-											"width": 91.91455078125,
+											"width": 91,
 											"height": 36,
 											"autoResize": true,
 											"showNamespace": true,
@@ -21180,7 +21180,7 @@
 											"tail": {
 												"$ref": "AAAAAAFqFYFmhfvKAgs="
 											},
-											"points": "360:312;480:312;480:160;379:160",
+											"points": "360:312;480:312;480:160;375:160",
 											"showVisibility": true,
 											"nameLabel": {
 												"$ref": "AAAAAAFqFYIFMPxBMl4="
@@ -21235,7 +21235,7 @@
 															"font": "Arial;11;1",
 															"left": 1101,
 															"top": 319,
-															"width": 95.34228515625,
+															"width": 87,
 															"height": 11,
 															"text": "CustomerAccount"
 														},
@@ -21313,7 +21313,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 340,
-															"width": 95.34228515625,
+															"width": 87,
 															"height": 11,
 															"text": "+id: string",
 															"horizontalAlignment": 0
@@ -21331,7 +21331,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 353,
-															"width": 95.34228515625,
+															"width": 87,
 															"height": 11,
 															"text": "+first: string",
 															"horizontalAlignment": 0
@@ -21349,7 +21349,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 366,
-															"width": 95.34228515625,
+															"width": 87,
 															"height": 11,
 															"text": "+last: string",
 															"horizontalAlignment": 0
@@ -21367,7 +21367,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 379,
-															"width": 95.34228515625,
+															"width": 87,
 															"height": 11,
 															"text": "+email: string",
 															"horizontalAlignment": 0
@@ -21385,7 +21385,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 392,
-															"width": 95.34228515625,
+															"width": 87,
 															"height": 11,
 															"text": "+company: string",
 															"horizontalAlignment": 0
@@ -21403,7 +21403,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 405,
-															"width": 95.34228515625,
+															"width": 87,
 															"height": 11,
 															"text": "+phone: string",
 															"horizontalAlignment": 0
@@ -21413,7 +21413,7 @@
 													"font": "Arial;11;0",
 													"left": 1096,
 													"top": 335,
-													"width": 105.34228515625,
+													"width": 97,
 													"height": 86
 												},
 												{
@@ -21473,7 +21473,7 @@
 											"containerChangeable": true,
 											"left": 1096,
 											"top": 312,
-											"width": 105.34228515625,
+											"width": 97,
 											"height": 109,
 											"autoResize": true,
 											"showProperty": false,
@@ -21810,7 +21810,7 @@
 															"font": "Arial;11;1",
 															"left": 1101,
 															"top": 487,
-															"width": 95.08447265625,
+															"width": 92,
 															"height": 11,
 															"text": "Payment"
 														},
@@ -21848,7 +21848,7 @@
 													"font": "Arial;11;0",
 													"left": 1096,
 													"top": 480,
-													"width": 105.08447265625,
+													"width": 102,
 													"height": 23,
 													"stereotypeLabel": {
 														"$ref": "AAAAAAFqFZaJxgGv4UI="
@@ -21886,7 +21886,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 508,
-															"width": 95.08447265625,
+															"width": 92,
 															"height": 11,
 															"text": "+type: string",
 															"horizontalAlignment": 0
@@ -21904,7 +21904,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 521,
-															"width": 95.08447265625,
+															"width": 92,
 															"height": 11,
 															"text": "+creditcard: string",
 															"horizontalAlignment": 0
@@ -21922,7 +21922,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 534,
-															"width": 95.08447265625,
+															"width": 92,
 															"height": 11,
 															"text": "+cardEnding: string",
 															"horizontalAlignment": 0
@@ -21940,7 +21940,7 @@
 															"font": "Arial;11;0",
 															"left": 1101,
 															"top": 547,
-															"width": 95.08447265625,
+															"width": 92,
 															"height": 11,
 															"text": "+bank: string",
 															"horizontalAlignment": 0
@@ -22010,7 +22010,7 @@
 											"containerChangeable": true,
 											"left": 1096,
 											"top": 480,
-											"width": 105.08447265625,
+											"width": 102,
 											"height": 83,
 											"autoResize": true,
 											"nameCompartment": {
@@ -23523,7 +23523,7 @@
 															"font": "Arial;11;1",
 															"left": 293,
 															"top": 759,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "SubscriptionInfo"
 														},
@@ -23561,7 +23561,7 @@
 													"font": "Arial;11;0",
 													"left": 288,
 													"top": 752,
-													"width": 253.64892578125,
+													"width": 244.033203125,
 													"height": 23,
 													"stereotypeLabel": {
 														"$ref": "AAAAAAFqFaNF3w6zl7I="
@@ -23599,7 +23599,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 780,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+id: string",
 															"horizontalAlignment": 0
@@ -23617,7 +23617,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 793,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+active: bool",
 															"horizontalAlignment": 0
@@ -23635,7 +23635,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 806,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+state: string",
 															"horizontalAlignment": 0
@@ -23653,7 +23653,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 819,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+dateOfLastUpdate: dateTime",
 															"horizontalAlignment": 0
@@ -23671,7 +23671,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 832,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+sequence: int",
 															"horizontalAlignment": 0
@@ -23689,7 +23689,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 845,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+validFrom: dateTime",
 															"horizontalAlignment": 0
@@ -23707,7 +23707,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 858,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+validUntil: dateTime",
 															"horizontalAlignment": 0
@@ -23725,7 +23725,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 871,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+dateOfNextCharge: dateTime",
 															"horizontalAlignment": 0
@@ -23743,7 +23743,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 884,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+nextChargeTotal: float",
 															"horizontalAlignment": 0
@@ -23761,7 +23761,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 897,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+nextChargeTotalInPayoutCurrency: float",
 															"horizontalAlignment": 0
@@ -23779,7 +23779,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 910,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+nextChargeTotalDisplay: string",
 															"horizontalAlignment": 0
@@ -23797,7 +23797,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 923,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+nextChargeTotalInPayoutCurrencyDisplay: string",
 															"horizontalAlignment": 0
@@ -23815,7 +23815,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 936,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+nextNotificationType: string",
 															"horizontalAlignment": 0
@@ -23833,7 +23833,7 @@
 															"font": "Arial;11;0",
 															"left": 293,
 															"top": 949,
-															"width": 243.64892578125,
+															"width": 234.033203125,
 															"height": 11,
 															"text": "+dateOfNextNotification: dateTime",
 															"horizontalAlignment": 0
@@ -23901,7 +23901,7 @@
 											"containerChangeable": true,
 											"left": 288,
 											"top": 752,
-											"width": 253.64892578125,
+											"width": 244.033203125,
 											"height": 213,
 											"autoResize": true,
 											"showProperty": false,
